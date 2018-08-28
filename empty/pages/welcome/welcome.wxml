@@ -1,0 +1,14 @@
+<!--骨架文件html-->
+<view class='container'>
+  <image class="pandaImage-avater"
+         src="/src/image/panda.jpeg">
+  </image>
+
+  <text class='panda-name'>熊猫<text style="color: #FF0000">烧香</text></text>
+  
+  <view class='moto-container'>
+    <text class='moto'>你挂了</text>
+  </view>
+  
+
+</view>
