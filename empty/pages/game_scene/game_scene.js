@@ -130,6 +130,14 @@ Page({
       console.log(this.data);
     }
   },
+  onTapRanking: function() {
+    wx.navigateTo({
+      url: '../game_detail/game_detail',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  }
 })
 
 function resetValue() {

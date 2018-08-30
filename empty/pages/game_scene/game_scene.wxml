@@ -1,6 +1,10 @@
 <import src="item/game_scene_item.wxml" />
 
 <view>
+<view class='rankingBase' wx:if="{{is_gameover == true}}" catchtap="onTapRanking">
+<!-- <view class='rankingBase' wx:if="{{true}}"> -->
+  <text class='ranking'>排行榜</text>
+  </view>
   <block wx:for="{{column_index}}" wx:for-index="{{col_index}}" wx:for-item="col_item">
     <view class='game_item'>
       <!--“item” 可省略为默认， idx也可省略-->
@@ -14,7 +18,7 @@
     </view>
   </block>
 
-    <view class='resetBase' bindtap='onReset' wx:if="{{is_gameover == true}}">
-  <text class='resetFont'>重新开始</text>
+  <view class='resetBase' bindtap='onReset' wx:if="{{is_gameover == true}}">
+    <text class='resetFont'>重新开始</text>
   </view>
 </view>
