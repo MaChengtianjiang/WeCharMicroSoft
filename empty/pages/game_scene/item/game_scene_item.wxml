@@ -1,0 +1,9 @@
+<template name="game_scene_item">
+
+<view class='game_item'> </view>
+  <view class="post-container">
+    <text class="post-title" wx:if="{{is_alive == true}}">{{id}}</text>
+    <image class="post-image" src="{{img.post_image}}"></image>
+    <text class=" post-content" wx:if="{{is_alive == true}}">{{value}}</text>
+  </view>
+</template>

@@ -1,0 +1,18 @@
+@import "item/game_scene_item.wxss";
+
+.post-container{
+    flex-direction:column;
+    display:flex;
+
+    margin-top: 50rpx;
+    margin-bottom:40rpx;
+    margin-left: 0rpx;
+    
+    /*
+    background-color:#fff;
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    padding-bottom: 5px;*/
+}
+
+

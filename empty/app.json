@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/welcome/welcome"
+    "pages/game_scene/game_scene",
+    "pages/welcome/welcome",
+    
+    "pages/game_detail/game_detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#76b47a"
