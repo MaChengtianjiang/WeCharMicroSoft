@@ -1,26 +1,29 @@
-
-.game_item{
+.game_item {
+  margin-top: 50rpx;
+  margin-left: 20rpx;
   display: flex;
   flex-direction: row;
 }
 
-.post-image{
-    width:160rpx;
-    height:340rpx;
-    margin:auto 0;
-    margin-bottom: 15px;
-    margin-left: 10px;
+.post-image {
+  width: 150rpx;
+  height: 300rpx;
+  margin: auto 0;
+  margin-bottom: 15px;
+  margin-left: 10px;
 }
+
 .post-title {
-    margin-left: 90rpx;
-    letter-spacing:2rpx;
-    line-height: 40rpx;
+  margin-left: 90rpx;
+  letter-spacing: 2rpx;
+  line-height: 40rpx;
 }
-.post-content{
-    color:#666;
-    font-size:28rpx;
-    margin-bottom:20rpx;
-    margin-left: 90rpx;
-    letter-spacing:2rpx;
-    line-height: 40rpx;
+
+.post-content {
+  color: #666;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  margin-left: 90rpx;
+  letter-spacing: 2rpx;
+  line-height: 40rpx;
 }

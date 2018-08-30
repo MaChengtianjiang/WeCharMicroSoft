@@ -1,5 +1,6 @@
 
-
+var pandaIcon = '/src/images/panda.jpeg';
+var cardIcon = '/src/icons/Icon_Tribe_0';
 
 function randomFrom (lowerValue, upperValue) {
   return Math.floor(Math.random() * (upperValue - lowerValue + 1) + lowerValue);
@@ -24,8 +25,8 @@ function randomArray() {
         id: i,
         value: array[i],
         img: {
-          post_image: "/src/images/panda.jpeg",
-          icon: "/src/icons/Icon_Tribe_0" + array[i]+".png",
+          post_image: pandaIcon,
+          icon: cardIcon + array[i]+".png",
         },
         is_alive: true,
       }
@@ -36,5 +37,5 @@ function randomArray() {
 
 module.exports = {
   randomArray: randomArray,
-  //gameItemData: gameItemData
+  pandaIcon: pandaIcon,
 }

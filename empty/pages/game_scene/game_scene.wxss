@@ -1,18 +1,32 @@
 @import "item/game_scene_item.wxss";
 
-.post-container{
-    flex-direction:column;
-    display:flex;
+.post-container {
+  flex-direction: column;
+  display: flex;
+  margin-top: 40rpx;
 
-    margin-top: 50rpx;
-    margin-bottom:40rpx;
-    margin-left: 0rpx;
-    
-    /*
+  margin-left: 0rpx;
+  /*
     background-color:#fff;
     border-bottom: 1px solid #ededed;
     border-top: 1px solid #ededed;
     padding-bottom: 5px;*/
 }
 
+.resetBase {
+  align-items: center;
+  text-align: center;
+  width: 350rpx;
+  margin-left: auto; 
+  margin-right: auto;
+}
 
+.resetFont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5px;
+  border: 1px solid #405f80;
+  border-radius: 5rpx; 
+}

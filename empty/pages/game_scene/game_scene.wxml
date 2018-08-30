@@ -1,27 +1,20 @@
 <import src="item/game_scene_item.wxml" />
 
 <view>
-<block wx:for = "{{column_index}}" wx:for-index ="{{col_index}}" wx:for-item="col_item">
-<view class='game_item'>
-  <!--“item” 可省略为默认， idx也可省略-->
-  <block wx:for="{{post_key}}" wx:for-index ="{{current_index}}"
-    wx:if="{{item.id >= col_item * 4 && item.id < (col_item + 1) * 4}}" wx:for-item="item">
+  <block wx:for="{{column_index}}" wx:for-index="{{col_index}}" wx:for-item="col_item">
+    <view class='game_item'>
+      <!--“item” 可省略为默认， idx也可省略-->
+      <block wx:for="{{post_key}}" wx:for-index="{{current_index}}" wx:if="{{item.id >= col_item * 4 && item.id < (col_item + 1) * 4}}" wx:for-item="item">
 
-    <view catchtap="onPostTap" data-id="{{item.id}}" data-value="{{item.value}}" data-is_alive = "{{item.is_alive}}"
-    data-icon = "{{item.img.icon}}">
-      <template is="game_scene_item" data="{{...item}}" />
+        <view catchtap="onPostTap" data-id="{{item.id}}" data-value="{{item.value}}" data-is_alive="{{item.is_alive}}" data-icon="{{item.img.icon}}">
+          <template is="game_scene_item" data="{{...item}}" />
+        </view>
+
+      </block>
     </view>
-    
   </block>
-</view>
-  </block>
-<!--<view class='game_item'>
 
-  “item” 可省略为默认， idx也可省略-->
-  <!-- <block wx:for="{{post_key}}" wx:if="{{index > 3}}" wx:for-item="item">
-    <view catchtap="onPostTap" data-id="{{item.id}}">
-      <template is="game_scene_item" data="{{...item}}" />
-    </view>
-  </block> -->
-
+    <view class='resetBase' bindtap='onReset' wx:if="{{is_gameover == true}}">
+  <text class='resetFont'>重新开始</text>
+  </view>
 </view>

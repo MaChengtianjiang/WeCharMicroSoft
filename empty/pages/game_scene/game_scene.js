@@ -5,8 +5,6 @@ var isTapBan = false;
 
 Page({
 
-
-
   /**
    * 页面的初始数据
    */
@@ -20,10 +18,22 @@ Page({
    */
   onLoad: function (options) {
 
+    if (isTapBan) {
+      return;
+    }
 
     this.setData({
       column_index: [0, 1],
-      post_key: postData.randomArray()
+      post_key: postData.randomArray(),
+      is_gameover: false,
+    });
+  },
+
+  onReset: function (event) {
+    this.setData({
+      column_index: [0, 1],
+      post_key: postData.randomArray(),
+      is_gameover: false
     });
   },
 
@@ -72,6 +82,8 @@ Page({
         //清空两个卡片的贴图
         isTapBan = true
         setTimeout(function () {
+
+          //清掉图片
           that.setData({
             [currentKey]: '',
             [preKey]: '',
@@ -80,6 +92,22 @@ Page({
           });
           resetValue();
           isTapBan = false;
+
+          //还有存活的卡片没有
+          var isThenAlive = false;
+          var arr = that.data.post_key;
+          for (var i = 0; i < arr.length; i++) {
+            isThenAlive = arr[i].is_alive;
+            if (isThenAlive) {
+              break;
+            }
+          }
+          if (!isThenAlive) {
+            that.setData({
+              'is_gameover': true
+            });
+          }
+
         }, 2000);
         resetValue();
       } else {
@@ -87,8 +115,8 @@ Page({
         isTapBan = true;
         setTimeout(function () {
           that.setData({
-            [currentKey]: '/src/images/panda.jpeg',
-            [preKey]: '/src/images/panda.jpeg',
+            [currentKey]: postData.pandaIcon,
+            [preKey]: postData.pandaIcon,
           });
           resetValue();
           isTapBan = false;
