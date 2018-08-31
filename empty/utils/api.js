@@ -25,7 +25,7 @@ let templet = {
 
 }
 
-function ajax(data = '', fn, method = "get", header = {}) {
+function ajax(data = '', fn, er, method = "get", header = {}) {
   if (!DEBUG) {
     wx.request({
       url: config.API_HOST + data,
@@ -34,6 +34,9 @@ function ajax(data = '', fn, method = "get", header = {}) {
       header: header ? header : { "Content-Type": "application/json" },
       success: function (res) {
         fn(res);
+      },
+      fail:function(res) {
+        er(res);
       }
     });
   } else {

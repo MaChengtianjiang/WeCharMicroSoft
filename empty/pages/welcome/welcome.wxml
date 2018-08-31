@@ -1,17 +1,18 @@
 <!--骨架文件html-->
+<view class="ranking">光荣榜</view>
+
 <view class='container'>
-  <image class="pandaImage-avater"
-         src="/src/images/panda.jpeg">
+  <image class="pandaImage-avater" src="/src/images/panda.jpeg">
   </image>
 
   <text class='panda-name'>熊猫<text style="color: #FF0000">烧香</text></text>
-  
+
   <view class='moto-container' bindtap='viewTap'>
-    <text class='moto'>你挂了</text>
+    <text class='moto'>纸牌</text>
   </view>
 
-  <view>{{text}}</view>
-
-  <view>{{callback}}</view>
+  <view class='shotting'>
+    <text class='moto'>射击</text>
+  </view>
 
 </view>

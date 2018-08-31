@@ -1,0 +1,48 @@
+/* pages/shotting_game/shotting_game.wxss */
+
+.currentFps {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  align-items: center;
+  background: gray;
+}
+
+.playBase {
+  position: absolute;
+  height: 95.5%;
+  width: 100%;
+  background: black;
+  color: white;
+  text-align: center;
+  line-height: 120px;
+}
+
+.player {
+  position: absolute;
+  height: 128rpx;
+  width: 128rpx;
+  top: 240px;
+  left: 100px;
+  z-index: 100;
+}
+
+.enemy {
+  position: absolute;
+  height: 128rpx;
+  width: 128rpx;
+  top: -100px;
+  left: 100px;
+  z-index: 100;
+}
+
+.gameover {
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 50rpx;
+  margin-left: 40%;
+  margin-top: 50%;
+  z-index: 101;
+}

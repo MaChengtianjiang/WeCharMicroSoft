@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/shotting_game/shotting_game",
+    "pages/welcome/welcome",
     "pages/game_detail/game_detail",
-    "pages/game_scene/game_scene",
-    "pages/welcome/welcome"
+    "pages/game_scene/game_scene"
+    
   ],
   "window": {
     "navigationBarBackgroundColor": "#76b47a"

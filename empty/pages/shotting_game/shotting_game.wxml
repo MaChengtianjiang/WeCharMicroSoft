@@ -1,0 +1,21 @@
+<!--pages/shotting_game/shotting_game.wxml-->
+
+<view>
+  <text class='currentFps'>Fps:{{currentFps}}</text>
+</view>
+<view>
+
+  <view class='playBase'>
+    <view>
+      <image class='player' src="/src/icons/Icon_Tribe_01.png" bindtap="onPlayerClickEvent" style="left:{{player.postion.x}}px;top:{{player.postion.y}}px;" bindtouchmove="onPlayerMoveEvent"></image>
+    </view>
+
+    <block wx:for="{{enemies}}" wx:for-item="enemy_item">
+      <view>
+            <image class='enemy' src="/src/icons/Icon_Tribe_09.png" style="left:{{enemy_item.postion.x}}px;top:{{enemy_item.postion.y}}px;" bindtouchmove="onPlayerMoveEvent"></image>
+      </view>
+    </block>
+  </view>
+
+  <text class='gameover' wx:if="{{true}}">你挂了</text>
+</view>
