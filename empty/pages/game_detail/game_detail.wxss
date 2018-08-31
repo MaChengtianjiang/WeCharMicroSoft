@@ -1,1 +1,69 @@
 /* pages/game_detail/game_detail.wxss */
+
+.base {
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 1300rpx;
+  z-index: -1;
+}
+
+.titleimage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 130rpx;
+  width: 500rpx;
+  height: 180rpx;
+  margin-top: 100rpx;
+}
+
+.titletext {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 250rpx;
+  width: 500rpx;
+  height: 200rpx;
+  margin-top: 100rpx;
+  font-size: 90rpx;
+  color: rebeccapurple;
+}
+
+.rankingframe {
+  position: absolute;
+  left: 0rpx;
+  width: 760rpx;
+  height: 800rpx;
+  margin-top: 280rpx;
+}
+
+.rankingitem {
+  position: absolute;
+  color: white;
+  margin-top: 380rpx;
+  font-size: 90rpx;
+  z-index: 1;
+  width: 200rpx;
+  margin-left: 200rpx;
+  flex-direction: column;
+  display: flex;
+
+}
+.itemtext {
+
+  color: orchid;
+  width: 25rpx;
+  font-size: 60rpx;
+  text-align:right;
+}
+
+.itemscore {
+  margin-left: 50rpx;
+  color: black;
+  text-align:right;
+}

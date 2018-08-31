@@ -1,2 +1,17 @@
 <!-- 先静后动 布局后再控制 -->
-<text>pages/game_detail/game_detail.wxml</text>
+<view class='base'>
+  <image class='bg' src='../../src/images/common/common_BG.png'> </image>
+  <view class='title'>
+    <image class='titleimage' src='../../src/images/common/base_shop_bonus.png'></image>
+    <text class='titletext'>光荣榜</text>
+  </view>
+
+
+  <image class='rankingframe' src='../../src/images/common/new_dialogue_base.png'></image>
+  <view class='rankingitem'>
+    <block wx:for="{{items}}" wx:if="{{index < 7}}">
+      <text class='itemtext'>{{item.name}}:<text class='itemscore'>{{item.score}}</text></text>
+
+    </block>
+  </view>
+</view>

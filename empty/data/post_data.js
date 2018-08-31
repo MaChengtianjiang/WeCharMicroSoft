@@ -1,6 +1,6 @@
 
-var pandaIcon = '/src/images/panda.jpeg';
-var cardIcon = '/src/icons/Icon_Tribe_0';
+var pandaIcon = '/../src/images/panda.jpeg';
+var cardIcon = '/../src/icons/Icon_Tribe_0';
 
 function randomFrom (lowerValue, upperValue) {
   return Math.floor(Math.random() * (upperValue - lowerValue + 1) + lowerValue);
