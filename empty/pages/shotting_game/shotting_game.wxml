@@ -5,7 +5,7 @@
 </view>
 <view>
 
-  <view class='playBase'>
+  <view class='playBase' bindtap='onNewPlayerClickEvent'>
     <view>
       <image class='player' src="/src/icons/Icon_Tribe_01.png" bindtap="onPlayerClickEvent" style="left:{{player.postion.x}}px;top:{{player.postion.y}}px;" bindtouchmove="onPlayerMoveEvent"></image>
     </view>
@@ -17,5 +17,6 @@
     </block>
   </view>
 
-  <text class='gameover' wx:if="{{true}}">你挂了</text>
+  <text class='gameover' wx:if="{{gameover}}">你挂了</text>
+  <text class='restart' wx:if="{{gameover}}" bindtap='onRestartClickEvent'>再开</text>
 </view>

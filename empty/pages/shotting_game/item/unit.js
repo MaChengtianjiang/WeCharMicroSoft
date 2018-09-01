@@ -1,5 +1,6 @@
 var Vector2 = require('../../../utils/vector2.js')
 
+// TODO:继承
 function instantce(index, pos) {
   var id = index;
   var postion = pos;
@@ -12,6 +13,8 @@ function instantce(index, pos) {
   }
 }
 
+
+
 module.exports = {
-  instantce: instantce
+  instantce: instantce,
 }

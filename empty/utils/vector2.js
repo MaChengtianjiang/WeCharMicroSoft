@@ -1,4 +1,4 @@
-function Vector2 (x, y) { this.x = x; this.y = y; };
+function Vector2(x, y) { this.x = x; this.y = y; };
 
 Vector2.prototype = {
   copy: function () { return new Vector2(this.x, this.y); },
@@ -11,8 +11,16 @@ Vector2.prototype = {
   multiply: function (f) { return new Vector2(this.x * f, this.y * f); },
   divide: function (f) { var invf = 1 / f; return new Vector2(this.x * invf, this.y * invf); },
   dot: function (v) { return this.x * v.x + this.y * v.y; },
-  x: function () { return this.x;},
-  y: function () { return this.y;},
+  x: function () { return this.x; },
+  y: function () { return this.y; },
+  isCollision: function (enemy, player) {
+    var posA = enemy.postion;
+    var posB = player.postion;
+    var d = (posB.x - posA.x) * (posB.x - posA.x) + (posB.y - posA.y) * (posB.y - posA.y);
+    var result = Math.sqrt(d) < player.radius;
+    return result;
+  }
+
 };
 
 module.exports = {

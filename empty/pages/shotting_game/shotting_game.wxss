@@ -17,6 +17,7 @@
   color: white;
   text-align: center;
   line-height: 120px;
+  z-index: 0;
 }
 
 .player {
@@ -45,4 +46,14 @@
   margin-left: 40%;
   margin-top: 50%;
   z-index: 101;
+}
+.restart {
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 50rpx;
+  margin-left: 42%;
+  margin-top: 60%;
+  z-index: 101;
+
 }
